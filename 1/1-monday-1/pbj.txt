@@ -1,0 +1,27 @@
+open bread
+open napkin
+untwist jelly top to open
+untwist top for peanut butter
+
+pbjs_made = 0
+molly, james, robby, russell
+
+count number of students
+make pbjs until pbjs_made is the same a number of students
+  put two slices of bread on napkin face up
+
+  pick up knife
+  scoop generous portion on bread on the napkin
+  clean knife on other slice of bread
+  ask student for jelly type
+
+  if student preference of jelly is grape
+    repeat with grape jelly
+  else
+    repeat with strawberry jelly
+  end
+
+  place jelly face to bread face
+
+end
+close jars
