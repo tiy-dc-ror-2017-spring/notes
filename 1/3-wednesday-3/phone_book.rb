@@ -17,10 +17,13 @@ loop do
   break if input.empty?
   puts "Whats yo nummer?"
   number = gets.chomp
-  person = { "name" => input, "number" => number }
+  person = {
+    "name" => input,
+    "number" => number
+  }
 
-  person["name"] = input
-  person["number"] = number
+  # person["name"] = input
+  # person["number"] = number
 
 
   puts "Try Again Jerkyface Mc Jerkface" if phone_book.include?(input)

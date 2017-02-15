@@ -39,3 +39,19 @@ nicknames["Robby"] = "Rusty"
 nicknames
 nicknames.delete("Robby")
 exit
+a = { "Robby" => ["Robdog", "Robsters", "Robomuffin" ]}
+a.each do |k, v|
+  p k 
+  p v 
+end
+a.keys
+a[[1,2,3]]
+a
+a[[1,2,3]] = "H"
+a
+a.keys
+a.keys.include?(2)
+exit
+phone_book = { "Russell" => { "email" => "russell@theironyard.com", "phone_number" => "703-999-7754" } }
+phone_book["Russell"]["email"]
+exit

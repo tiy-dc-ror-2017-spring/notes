@@ -1,18 +1,18 @@
 def greeter(name = "Class", yelling = "")
-  message = "Hello #{name}"                # => "Hello Russell", "Hello Class", "Hello Russell", "Hello "
+  message = "Hello #{name}"
 
-  if yelling        # => "",              "",            true,            true
-    message.upcase  # => "HELLO RUSSELL", "HELLO CLASS", "HELLO RUSSELL", "HELLO "
+  if yelling
+    message.upcase
   else
     message
-  end               # => "HELLO RUSSELL", "HELLO CLASS", "HELLO RUSSELL", "HELLO "
-end                 # => :greeter
+  end
+end
 
 
-greeter("Russell")  # => "HELLO RUSSELL"
+greeter("Russell")
 
-greeter  # => "HELLO CLASS"
+greeter
 
-greeter("Russell", true)  # => "HELLO RUSSELL"
+greeter("Russell", true)
 
-greeter(nil, true)  # => "HELLO "
+greeter(nil, true)
