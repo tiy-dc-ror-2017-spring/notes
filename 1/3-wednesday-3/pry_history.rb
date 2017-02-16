@@ -55,3 +55,6 @@ exit
 phone_book = { "Russell" => { "email" => "russell@theironyard.com", "phone_number" => "703-999-7754" } }
 phone_book["Russell"]["email"]
 exit
+valid_inputs = []
+valid_inputs << "703-999-7754"
+exit
