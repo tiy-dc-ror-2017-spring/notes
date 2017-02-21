@@ -1,0 +1,2 @@
+class NoWingsError < StandardError
+end
