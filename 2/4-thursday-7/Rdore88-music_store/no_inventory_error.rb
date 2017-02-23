@@ -1,0 +1,2 @@
+class NoInventoryError < StandardError
+end
