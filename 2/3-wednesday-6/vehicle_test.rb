@@ -5,7 +5,7 @@ require_relative 'vehicle'
 
 class VehicleTest < Minitest::Test
 
-  #This is not good practice, AND it forces you to do dumb things like test_c_
+  #  This is not good practice, AND it forces you to do dumb things like test_c_
   #  in the code.  However, it's easier to follow as you're learning if the
   #  tests always run in the same order.
   def self.test_order
