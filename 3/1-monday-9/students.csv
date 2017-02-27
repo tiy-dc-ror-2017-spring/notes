@@ -1,0 +1,9 @@
+id,name,num_of_times_picked
+1,Robby,1
+2,molly,0
+3,james,1
+
+
+[
+  { id: 1, name: "Robby", num_of_times_picked: 1 }
+]
