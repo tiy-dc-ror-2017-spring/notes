@@ -1,0 +1,29 @@
+task :console do
+  require_relative "app_helper"
+  binding.pry
+end
+
+task :test do
+  require_relative  "test/app_test"
+  require_relative  "test/student_test"
+end
+
+namespace :db do
+  task :migrate do
+    require_relative "db/migrations/1_create_students_table"
+    require_relative "db/connection"
+    begin
+      CreateStudentsTable.migrate(:up)
+    rescue
+    end
+  end
+
+  task :rollback do
+    require_relative "db/migrations/1_create_students_table"
+    require_relative "db/connection"
+    begin
+      CreateStudentsTable.migrate(:down)
+    rescue
+    end
+  end
+end
