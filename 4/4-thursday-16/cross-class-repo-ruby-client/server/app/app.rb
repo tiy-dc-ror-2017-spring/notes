@@ -17,6 +17,10 @@ class App < Sinatra::Base
     }.to_json
   end
   # #################### YOUR ENDPOINTS BELOW ###############
+  post "/drugs" do
+    payload = JSON.parse request.body.read
+    Drug.create(payload).to_json
+  end
 
   # #################### YOUR ENDPOINTS ABOVE ###############
   # If this file is run directly boot the webserver
