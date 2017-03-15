@@ -1,0 +1,30 @@
+main {
+  color: #333333;
+  font-family: "Georgia", fantasy;
+}
+
+
+#primary-nav {
+  color: rgb(255,138,12);
+  border: 3px dashed #ffcc00;
+}
+
+main ul li {
+  font-size: 30px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+main ul li.product, p {
+  list-style: none;
+  color: rebeccapurple;
+  background-color: #eeeeee;
+  width: 32%;
+  float: left;
+  padding: 10px;
+  border-radius:5px;
+  box-shadow: 5px -1px teal;
+  margin-right: 10px;
+}
