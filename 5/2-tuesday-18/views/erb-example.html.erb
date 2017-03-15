@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello World from ERB</title>
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body>
+    <h1>Hello World</h1>
+    <p><time><%= Time.now %></time></p>
+    <nav>
+      <a href="https://www.lmgtfy.com">Google</a>
+    </nav>
+
+
+    <form action="/weather" method="post">
+      <input type="text" name="github_username" value="">
+      <input type="submit" name="" value="Get Profile">
+    </form>
+
+    <% @numbers.each do |number|%>
+      <p><%= p number %></p>
+    <% end %>
+
+  </body>
+</html>
