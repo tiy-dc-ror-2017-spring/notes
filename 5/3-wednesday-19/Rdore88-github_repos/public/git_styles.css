@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+  margin:0;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+aside {
+  float: left;
+  width: 20%;
+
+}
+
+article{
+  float: left;
+  width: 80%;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+header.top_nav {
+  background-color: #24292e;
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+header.top_nav form input {
+  background-color: #3f4347;
+  border: 1px solid #61666b;
+  height: 20px;
+}
+
+header.top_nav p{
+  float: left;
+  color: white;
+  margin-right: 20px;
+}
+
+header.top_nav form{
+  float: left;
+  margin: 15px 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.avatar {
+  width: 100%;
+  border-radius: 8px
+}
+
+ul {
+  padding-bottom: 20px;
+  position: relative;
+  margin-left: 25px;
+  margin-right: 150px;
+}
+
+ul li {
+  list-style: none;
+  border-bottom: 1px #e1e4e8 solid;
+}
+
+footer {
+ padding-top: 50px;
+ text-align: center;
+ font-size: 15px;
+}
+
+.cat {
+  width: 20px;
+  height: 20px;
+}
+
+
+.ruby {
+  background-color: #701516;
+}
+
+.shell {
+  background-color: #89e051;
+}
+
+.javascript {
+  background-color: #f1e05a;
+}
+
+.swift {
+  background-color: #ffac45;
+}
+
+.repo-language-color {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}

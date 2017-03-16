@@ -1,0 +1,18 @@
+{
+  "id": 38945,
+  "student": {
+    "id": 4660,
+    "name": "Robby Dore"
+  },
+  "assignment": {
+    "id": 13685,
+    "title": "GitHub Profile Page",
+    "due_date": null
+  },
+  "url": "https://github.com/Rdore88/github_repos",
+  "git_sha": "845e3a9ca2cb5c9ee64c47da5ea731315212a057",
+  "notes": "",
+  "status": "not_graded",
+  "created_at": "2017-03-16T07:56:41.696-04:00",
+  "updated_at": "2017-03-16T07:56:41.874-04:00"
+}

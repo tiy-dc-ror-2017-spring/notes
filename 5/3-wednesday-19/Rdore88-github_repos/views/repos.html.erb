@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%= @repos[0]["owner"]["login"] %></title>
+    <link rel="stylesheet" href="/git_styles.css">
+  </head>
+  <body>
+    <header class="top_nav">
+      <form action="" method="post">
+        <input type="text" name="search" value="" placeholder="Search GitHub">
+        <input type="submit" name="" value="Search github">
+      </form>
+      <p>Pull Requests</p>
+      <p>Issues</p>
+      <p>Pull Gists</p>
+    </header>
+    <main class="container">
+      <aside>
+        <img class="avatar" src = "<%= @repos[0]["owner"]["avatar_url"] %>">
+      </aside>
+      <article>
+        <nav>
+          <p><a href="<%= @repos[0]["owner"]["html_url"] %>">Overview</a></p>
+          <p><a href="<%= @repos[0]["owner"]["repos_url"] %>">Repositories</a></p>
+          <p><a href="<%= @repos[0]["owner"]["starred_url"] %>">Stars</a></p>
+          <p><a href="<%= @repos[0]["owner"]["followers_url"] %>">Followers</a></p>
+          <p><a href="<%= @repos[0]["owner"]["following_url"] %>">Following</a></p>
+        </nav>
+        <ul>
+          <% @repos.each do |repo| %>
+            <li>
+              <h3><a href="<%= repo["html_url"] %>"><%= repo["name"] %></a></h3>
+              <span class="<%= repo["language"].to_s.downcase %> repo-language-color"></span>
+              <%= repo["language"] %>
+              <% if repo["description"] %>
+                <p>
+                  <%= repo["description"] %>
+                </p>
+              <% end %>
+
+            </li>
+          <% end %>
+        </ul>
+      </article>
+      <footer>
+        <a href="https://help.github.com/articles/github-terms-of-service/">Terms</a>
+        <a href="https://help.github.com/articles/github-privacy-statement/">Privacy</a>
+        <a href="https://help.github.com/articles/github-security/">Security</a>
+        <a href="https://status.github.com/">Status</a>
+        <a href="https://help.github.com/">Help</a>
+        <img class="cat" src="https://octodex.github.com/images/stormtroopocat.png">
+      </footer>
+    </main>
+  </body>
+</html>
