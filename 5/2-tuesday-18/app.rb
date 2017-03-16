@@ -6,7 +6,7 @@ set :bind, "0.0.0.0"
 
 # Painful, ruby in strings
 get "/" do
-  numbers = (1..100).to_a.shuffle
+  numbers = (1..15).to_a.shuffle
 
   p_tags = ""
   numbers.each do |number|
@@ -24,7 +24,7 @@ end
 
 # Add an route that will render ERB, or ruby inside of html.
 get "/erb" do
-  @numbers = (1..100).to_a.shuffle
+  @numbers = (1..15).to_a.shuffle
 
   # ERB.new(File.read("./erb-example.html.erb")).result(binding)
 
