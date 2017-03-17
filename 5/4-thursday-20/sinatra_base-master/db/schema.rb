@@ -10,12 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170316112852) do
+ActiveRecord::Schema.define(version: 20170317110120) do
 
   create_table "carafes", force: :cascade do |t|
+    t.string  "name"
+    t.float   "max_volume"
+    t.float   "current_volume"
+    t.integer "event_id"
+  end
+
+  create_table "events", force: :cascade do |t|
     t.string "name"
-    t.float  "max_volume"
-    t.float  "current_volume"
+    t.string "street_1"
+    t.string "street_2"
+    t.string "city"
+    t.string "state"
+    t.string "postal_code"
   end
 
 end

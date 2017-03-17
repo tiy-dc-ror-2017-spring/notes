@@ -5,3 +5,4 @@ require "pry"
 
 require_relative "database"
 require_relative "carafe"
+require_relative "event"

@@ -3,6 +3,13 @@
     <li>
       <%= carafe.name %>
       <a href="/carafes/<%= carafe.id %>/edit">✎ edit</a>
+
+      <form action="/carafes/<%= carafe.id %>" method="post">
+        <input type="hidden" name="_method" value="delete">
+
+        <input type="submit" name="" value="X">
+
+      </form>
     </li>
   <% end %>
 </ul>

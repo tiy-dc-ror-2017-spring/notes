@@ -7,4 +7,5 @@ end
 
 class Carafe < ActiveRecord::Base
   # self.table_name = "carafes"
+  belongs_to :event
 end

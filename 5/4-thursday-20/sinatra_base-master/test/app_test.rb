@@ -10,6 +10,6 @@ class AppTest < Minitest::Test
   def test_declares_its_name
     response = get "/"
     assert response.ok?
-    assert_equal "I am a webpage!  Replace me with your Homework!", response.body
+    assert_includes response.body, "Robby's Coffee Catering Co."
   end
 end

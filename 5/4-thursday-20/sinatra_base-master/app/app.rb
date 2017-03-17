@@ -28,9 +28,16 @@ class App < Sinatra::Base
     erb :"edit_carafe.html"
   end
 
-  patch '/carafes/:id' do
+  patch "/carafes/:id" do
     @carafe = Carafe.find(params["id"])
-    @carafe.update(params)
+    @carafe.update(params["carafe"])
+
+    redirect to("/carafes")
+  end
+
+  delete "/carafes/:id" do
+    @carafe = Carafe.find(params["id"])
+    @carafe.destroy
 
     redirect to("/carafes")
   end
