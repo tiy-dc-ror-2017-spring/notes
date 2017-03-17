@@ -1,22 +1,39 @@
-<ul>
-  <% @carafes.each do |carafe| %>
-    <li>
-      <%= carafe.name %>
+<table class="table table-hover table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Event</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
 
-      <% if carafe.event %>
-        <b>ON LOAN to</b>
-        <i><%= carafe.event.name %></i>
+      <% @carafes.each do |carafe| %>
+        <tr>
+          <td><%= carafe.id %></td>
+          <td><%= carafe.name %></td>
+
+          <td>
+            <% if carafe.event %>
+              <b>ON LOAN to</b>
+              <i><%= carafe.event.name %></i>
+            <% end %>
+          </td>
+
+          <td class="table-actions">
+            <a class="btn btn-xs btn-primary" href="/carafes/<%= carafe.id %>/edit">✎ edit</a>
+
+            <form action="/carafes/<%= carafe.id %>" method="post">
+              <input type="hidden" name="_method" value="delete">
+
+              <input class="btn btn-xs btn-danger" type="submit" name="" value="X">
+
+            </form>
+          </td>
+        </tr>
       <% end %>
 
 
-      <a href="/carafes/<%= carafe.id %>/edit">✎ edit</a>
-
-      <form action="/carafes/<%= carafe.id %>" method="post">
-        <input type="hidden" name="_method" value="delete">
-
-        <input type="submit" name="" value="X">
-
-      </form>
-    </li>
-  <% end %>
-</ul>
+  </tbody>
+</table>
