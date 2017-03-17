@@ -1,0 +1,8 @@
+<ul>
+  <% @carafes.each do |carafe| %>
+    <li>
+      <%= carafe.name %>
+      <a href="/carafes/<%= carafe.id %>/edit">✎ edit</a>
+    </li>
+  <% end %>
+</ul>

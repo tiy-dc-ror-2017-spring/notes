@@ -1,0 +1,13 @@
+<h2>Edit <%= @carafe.name  %></h2>
+<p>Input the following fields (only if you are properly authorized)</p>
+<form action="/carafes/<%= @carafe.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+
+  <label for="">Name</label>
+  <input type="text" name="name" value="<%= @carafe.name %>" placeholder="ie., Pool">
+
+  <label for="">Max Volume</label>
+  <input type="text" name="max_volume" value="<%= @carafe.max_volume %>" placeholder="ie., 1000ml">
+
+  <input type="submit" name="" value="Save">
+</form>
