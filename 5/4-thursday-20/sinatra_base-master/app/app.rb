@@ -7,6 +7,14 @@ class App < Sinatra::Base
     erb :'home.html'
   end
 
+  # events #####################################################################
+  get "/events" do
+    @events = Event.all
+    binding.pry
+    erb :"events.html"
+  end
+
+  # carafes ####################################################################
   get "/carafes" do
     @carafes = Carafe.all
     erb :'carafes.html'

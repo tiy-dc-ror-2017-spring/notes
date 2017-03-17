@@ -27,3 +27,8 @@ event
 event.carafes
 event.carafes.to_sql
 exit
+Event.create(name: "Russell's Pool Party")
+exit
+Event.create(name: "Iron Pints")
+Event.create(name: "Robby's Saint Patrick Day Party for Realz")
+exit

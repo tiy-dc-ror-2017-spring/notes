@@ -3,11 +3,22 @@
 <form action="/carafes/<%= @carafe.id %>" method="post">
   <input type="hidden" name="_method" value="patch">
 
-  <label for="">Name</label>
+  <label for="name">Name</label>
   <input type="text" name="carafe[name]" value="<%= @carafe.name %>" placeholder="ie., Pool">
 
-  <label for="">Max Volume</label>
+  <label for="max_volume">Max Volume</label>
   <input type="text" name="carafe[max_volume]" value="<%= @carafe.max_volume %>" placeholder="ie., 1000ml">
+
+  <label for="event_id" >Event</label>
+  <!-- <input type="text" name="carafe[event_id]" value="<%= @carafe.event_id %>"> -->
+
+  <select name="carafe[event_id]">
+    <option value="">Please select your event</option>
+    <% Event.all.each do |event| %>
+      <option <%= "selected" if event.id == @carafe.event_id %> value="<%= event.id %>"><%= event.name %></option>
+    <% end %>
+  </select>
+
 
   <input type="submit" name="" value="Save">
 </form>

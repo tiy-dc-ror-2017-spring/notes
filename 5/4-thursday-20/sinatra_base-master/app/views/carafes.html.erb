@@ -2,6 +2,13 @@
   <% @carafes.each do |carafe| %>
     <li>
       <%= carafe.name %>
+
+      <% if carafe.event %>
+        <b>ON LOAN to</b>
+        <i><%= carafe.event.name %></i>
+      <% end %>
+
+
       <a href="/carafes/<%= carafe.id %>/edit">✎ edit</a>
 
       <form action="/carafes/<%= carafe.id %>" method="post">
