@@ -1,5 +1,5 @@
 <h1>Bookings</h1>
-
+<a href="/bookings/new">MAKE A BOOKING JEEZ</a>
 <table>
   <thead>
     <tr>
@@ -18,7 +18,12 @@
         <td><%= booking.destination %></td>
         <td><%= booking.start_at %></td>
         <td><%= booking.end_at %></td>
-        <td></td>
+        <td>
+          <%= link_to "Edit", edit_booking_path(booking) %>
+          <!-- <a href="/bookings/<%= booking.id %>/edit">Edit</a> -->
+
+          <%= link_to "Delete", "/bookings/#{booking.id}", method: 'delete' %>
+        </td>
       </tr>
     <% end %>
   </tbody>

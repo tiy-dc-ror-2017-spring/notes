@@ -23,3 +23,11 @@ params["booking"]
 params.require("booking")
 params.require("booking").permit("customer_name")
 exit
+bookings
+bookings(:moose)
+Booking.where(customer_name: "Moose Osborne").first
+exit!
+booings(:poo_poo_head)
+bookings(:poo_poo_head)
+bookings(:poo_poo_head)exit
+exit
