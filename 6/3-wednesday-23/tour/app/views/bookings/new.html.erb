@@ -1,0 +1,17 @@
+<form class="" action="/bookings" method="post">
+  <label for="">Customer Name</label>
+  <input type="text" name="booking[customer_name]" value="">
+
+  <input type="submit" name="" value="Save">
+</form>
+
+
+<%= form_tag "/bookings" do %>
+  <%= label_tag "booking[customer_name]", "Customer", class: "form-control" %>
+  <%= text_field_tag "booking[customer_name]"  %>
+
+  <%= label_tag "booking[destination]", "Destination", class: "form-control" %>
+  <%= text_field_tag "booking[destination]"  %>
+
+  <%= submit_tag %>
+<% end %>
