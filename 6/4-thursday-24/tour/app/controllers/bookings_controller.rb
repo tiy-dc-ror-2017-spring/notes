@@ -6,13 +6,22 @@ class BookingsController < ApplicationController
   end
 
   def new
+    @booking = Booking.new
     render "new" # If your view name matches your action name it will be looked up by default.
   end
 
   def create
-    Booking.create(booking_params)
+    @booking = Booking.new(booking_params)
 
-    redirect_to "/bookings"
+    if @booking.save
+      session[:success] = "Booking created successfully!"
+
+      redirect_to bookings_path
+    else
+      session[:error] = "Booking could not be saved!"
+
+      render "new"
+    end
   end
 
   def edit
@@ -35,6 +44,7 @@ class BookingsController < ApplicationController
     params.require("booking").permit(
       "customer_name",
       "destination",
+      "bob",
       "start_at",
       "end_at"
     )

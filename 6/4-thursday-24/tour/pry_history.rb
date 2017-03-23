@@ -31,3 +31,13 @@ booings(:poo_poo_head)
 bookings(:poo_poo_head)
 bookings(:poo_poo_head)exit
 exit
+b = Booking.new
+b.save
+b
+b.errors
+ls b.errors
+ls b.errors.full_message
+ls b.errors.full_messages
+b.errors.full_messages
+b.errors.first
+exit

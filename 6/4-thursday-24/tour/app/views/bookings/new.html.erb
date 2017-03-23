@@ -5,13 +5,4 @@
   <input type="submit" name="" value="Save">
 </form> -->
 
-
-<%= form_tag "/bookings" do %>
-  <%= label_tag "booking[customer_name]", "Customer" %>
-  <%= text_field_tag "booking[customer_name]"  %>
-
-  <%= label_tag "booking[destination]", "Destination" %>
-  <%= text_field_tag "booking[destination]"  %>
-
-  <%= submit_tag %>
-<% end %>
+<%= render "form" %>

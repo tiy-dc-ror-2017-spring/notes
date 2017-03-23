@@ -13,3 +13,32 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  box-sizing: border-box;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: solid 1px gray;
+  margin-bottom: 10px;
+}
+
+.field_with_errors input{
+  border: solid 2px red;
+}
+
+p.message {
+  padding: 10px;
+}
+
+p.message.success{
+  border: solid 2px green;
+    background-color: rgba(0,255,0,0.1);
+}
+
+p.message.error{
+  border: solid 2px red;
+  background-color: rgba(255,0,0,0.1);
+}
