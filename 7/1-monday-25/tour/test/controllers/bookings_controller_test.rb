@@ -8,6 +8,10 @@ class BookingsControllerTest < ActionDispatch::IntegrationTest
     `open #{path}`
   end
 
+  setup do
+    post sessions_path, params: { email: users(:one).email, password: "123" }
+  end
+
   test "should get index" do
     # robby = Booking.create(customer_name: "Robby Dore")
 

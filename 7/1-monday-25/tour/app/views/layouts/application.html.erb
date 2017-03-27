@@ -18,11 +18,23 @@
       <p class="message success"><%= session.delete(:success) %></p>
     <% end %>
 
+    <nav>
+      <% if current_user %>
+        <li>Welcome, <%= current_user.email %>!</li>
+        <li><%= link_to "Log Out", sessions_path, method: :delete %></li>
+      <% else %>
+        <li><%= link_to "Sign In", new_sessions_path %></li>
+        <li><%= link_to "Sign Up", new_user_path %></li>
+      <% end %>
+
+    </nav>
+
     <%= yield %>
 
     <pre>
       <code>
         <%= session.to_hash %>
+
       </code>
     </pre>
   </body>

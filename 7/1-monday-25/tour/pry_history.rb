@@ -41,3 +41,32 @@ ls b.errors.full_messages
 b.errors.full_messages
 b.errors.first
 exit
+BCrypt::Password
+BCrypt::Password.new "lajlaksjdf"
+BCrypt::Password.create "coffee"
+a = _
+a.class
+ls a
+a == "password"
+a == "coffee"
+a
+a == "coffee"
+a.checksum
+a
+a.cost
+a.salt
+params
+params.keys
+params[:email]
+User.where(email: params[:email])
+User.find_by(email: params[:email])
+params[:password]
+current_user = User.find_by(email: params[:email])
+current_user
+ls current_user
+ls current_user.password
+current_user.password
+current_user.password.class
+current_user.password == "coffee"
+current_user.password == params[:password]
+exit

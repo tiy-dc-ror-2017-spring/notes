@@ -1,4 +1,6 @@
 class BookingsController < ApplicationController
+  before_action :authorize!, except: [:index]
+
   def index
     @bookings = Booking.all
 
@@ -12,7 +14,7 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-
+    @booking.agent = current_user
     if @booking.save
       session[:success] = "Booking created successfully!"
 
@@ -48,5 +50,12 @@ class BookingsController < ApplicationController
       "start_at",
       "end_at"
     )
+  end
+
+  private def authorize!
+    if !current_user
+      session[:error] = "Go Away"
+      redirect_to new_sessions_path
+    end
   end
 end

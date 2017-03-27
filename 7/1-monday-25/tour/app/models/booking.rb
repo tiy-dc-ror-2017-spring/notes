@@ -1,4 +1,5 @@
 class Booking < ApplicationRecord
+  belongs_to :agent, class_name: "User", optional: true
   validates :customer_name, presence: true
   # def bob
   #   "wehadababyitsaboy"
