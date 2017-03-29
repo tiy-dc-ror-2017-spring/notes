@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  crew_count: 1
+  peripasis: 1.5
+  aposis: 1.5
+  max_fuel: 1.5
+  current_fuel: 1.5
+  country_code: MyString
+
+two:
+  name: MyString
+  crew_count: 1
+  peripasis: 1.5
+  aposis: 1.5
+  max_fuel: 1.5
+  current_fuel: 1.5
+  country_code: MyString

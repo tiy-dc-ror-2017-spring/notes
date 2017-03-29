@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @station.name %>
+</p>
+
+<p>
+  <strong>Crew count:</strong>
+  <%= @station.crew_count %>
+</p>
+
+<p>
+  <strong>Peripasis:</strong>
+  <%= @station.peripasis %>
+</p>
+
+<p>
+  <strong>Aposis:</strong>
+  <%= @station.aposis %>
+</p>
+
+<p>
+  <strong>Max fuel:</strong>
+  <%= @station.max_fuel %>
+</p>
+
+<p>
+  <strong>Current fuel:</strong>
+  <%= @station.current_fuel %>
+</p>
+
+<p>
+  <strong>Country code:</strong>
+  <%= @station.country_code %>
+</p>
+
+<%= link_to 'Edit', edit_station_path(@station) %> |
+<%= link_to 'Back', stations_path %>

@@ -1,0 +1,52 @@
+<%= form_for(station) do |f| %>
+  <% if station.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(station.errors.count, "error") %> prohibited this station from being saved:</h2>
+
+      <ul>
+      <% station.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :crew_count %>
+    <%= f.number_field :crew_count %>
+  </div>
+
+  <div class="field">
+    <%= f.label :peripasis %>
+    <%= f.text_field :peripasis %>
+  </div>
+
+  <div class="field">
+    <%= f.label :aposis %>
+    <%= f.text_field :aposis %>
+  </div>
+
+  <div class="field">
+    <%= f.label :max_fuel %>
+    <%= f.text_field :max_fuel %>
+  </div>
+
+  <div class="field">
+    <%= f.label :current_fuel %>
+    <%= f.text_field :current_fuel %>
+  </div>
+
+  <div class="field">
+    <%= f.label :country_code %>
+    <%= f.text_field :country_code %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
