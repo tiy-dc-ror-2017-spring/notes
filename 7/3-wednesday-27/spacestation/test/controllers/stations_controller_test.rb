@@ -16,8 +16,18 @@ class StationsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create station" do
-    assert_difference('Station.count') do
-      post stations_url, params: { station: { aposis: @station.aposis, country_code: @station.country_code, crew_count: @station.crew_count, current_fuel: @station.current_fuel, max_fuel: @station.max_fuel, name: @station.name, peripasis: @station.peripasis } }
+    assert_difference(-> { Station.count }) do
+      post stations_url, params: {
+        station: {
+          aposis: @station.aposis,
+          country_code: @station.country_code,
+          crew_count: @station.crew_count,
+          current_fuel: @station.current_fuel,
+          max_fuel: @station.max_fuel,
+          name: @station.name,
+          peripasis: @station.peripasis
+        }
+      }
     end
 
     assert_redirected_to station_url(Station.last)

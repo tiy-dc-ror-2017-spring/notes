@@ -35,5 +35,31 @@
   <%= @station.country_code %>
 </p>
 
+
+<h1>Crew</h1>
+<ul>
+  <% @station.crews.each do |crew| %>
+    <li>
+      <%= link_to crew.name, station_crew_path(@station, crew) %>
+      <small>
+        <%= crew.job_title %>
+        <i>
+          <%= time_ago_in_words crew.launch_at %> ago
+        </i>
+      </small>
+    </li>
+  <% end %>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
 <%= link_to 'Edit', edit_station_path(@station) %> |
 <%= link_to 'Back', stations_path %>

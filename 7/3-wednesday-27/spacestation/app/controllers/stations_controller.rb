@@ -53,6 +53,6 @@ class StationsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def station_params
-      params.require(:station).permit(:name, :crew_count, :peripasis, :aposis, :max_fuel, :current_fuel, :country_code)
+      params.require(:station).permit(:name, :crew_count, :peripasis, :aposis, :max_fuel, :current_fuel)
     end
 end
