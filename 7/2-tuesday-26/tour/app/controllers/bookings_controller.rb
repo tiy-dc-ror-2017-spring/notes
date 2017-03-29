@@ -16,11 +16,9 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.agent = current_user
     if @booking.save
-      session[:success] = "Booking created successfully!"
-
-      redirect_to bookings_path
+      redirect_to bookings_path, flash: { success: "Booking Created successfully" }
     else
-      session[:error] = "Booking could not be saved!"
+      flash[:error] = "Booking could not be saved!"
 
       render "new"
     end
