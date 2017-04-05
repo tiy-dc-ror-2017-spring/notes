@@ -1,2 +1,13 @@
-<h1>Homepage#index</h1>
-<p>Find me in app/views/homepage/index.html.erb</p>
+<h1>Sacred Cow Inc</h1>
+
+
+<section class="featured-products row">
+  <% Product.limit(3).each do |product| %>
+    <section class="col-md-4 col-xs-12">
+      <%= image_tag product.picture_url, class: "thumbnail img-responsive" %>
+
+      <%= link_to "Buy This Shirt", "#", class: 'add-to-cart', data: { product_id: product.id} %>
+      <%= number_to_currency product.unit_price %>
+    </section>
+  <% end %>
+</section>
