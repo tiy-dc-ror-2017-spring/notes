@@ -1,0 +1,14 @@
+{
+  "name": "node-lights",
+  "version": "1.0.0",
+  "description": "Turn on the lights behind james and molly",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Russell Osborne",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^1.6.3"
+  }
+}
